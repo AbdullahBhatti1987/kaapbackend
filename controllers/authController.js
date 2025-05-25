@@ -2,7 +2,7 @@ import User from '../models/User.js'
 import jwt from 'jsonwebtoken'
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '7d' })
+  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' })
 }
 
 export const register = async (req, res) => {

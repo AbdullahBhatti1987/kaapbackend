@@ -12,7 +12,6 @@
 //     process.exit(1)
 //   }
 // }
-
 // export default connectDB
 
 import mongoose from 'mongoose'
@@ -26,6 +25,4 @@ const connectDB = async () => {
     process.exit(1)
   }
 }
-
 export default connectDB
-

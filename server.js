@@ -79,7 +79,7 @@ app.get('/', (req, res) => {
 })
 
 import authRoutes from './routes/authRoutes.js'
-app.use('/api/auth', authRoutes)
+app.use('/api/auth/', authRoutes)
 
 import categoryRoutes from './routes/categoryRoutes.js'
 app.use('/api/categories', categoryRoutes)
@@ -93,7 +93,12 @@ app.use('/api/cart', cartRoutes)
 import orderRoutes from './routes/orderRoutes.js'
 app.use('/api/orders', orderRoutes)
 
+import sellerRoutes from './routes/sellerRoutes.js'
+app.use("/api/seller", sellerRoutes);
+
+
 connectDB()
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+
